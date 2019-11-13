@@ -12,7 +12,7 @@ def lock(bool state):
         GPIO.output(pin, 0)
 
     GPIO.setup(powerPin, GPIO.OUT)
-    GPIO.output(powerPin,)
+    GPIO.output(powerPin,1)
     
     if state == True:
         halfstep_seq = [
