@@ -11,7 +11,7 @@ powerPin = 37 # supply power to stepper controler
  
 # adjust if different
 StepCount = 8
-Seq = []*8
+Seq = [[],[],[],[],[],[],[],[]]
 Seq[0] = [1,0,0,0]
 Seq[1] = [1,1,0,0]
 Seq[2] = [0,1,0,0]
