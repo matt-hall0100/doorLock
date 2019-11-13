@@ -11,7 +11,7 @@ powerPin = 37 # supply power to stepper controler
  
 # adjust if different
 StepCount = 8
-Seq = [[],[],[],[],[],[],[],[]]
+Seq = [[],[],[],[],[],[],[],]
 Seq[0] = [1,0,0,0]
 Seq[1] = [1,1,0,0]
 Seq[2] = [0,1,0,0]
@@ -21,13 +21,11 @@ Seq[5] = [0,0,1,1]
 Seq[6] = [0,0,0,1]
 Seq[7] = [1,0,0,1]
  
-GPIO.setup(enable_pin, GPIO.OUT)
+GPIO.setup(powerPin, GPIO.OUT)
 GPIO.setup(coil_A_1_pin, GPIO.OUT)
 GPIO.setup(coil_A_2_pin, GPIO.OUT)
 GPIO.setup(coil_B_1_pin, GPIO.OUT)
 GPIO.setup(coil_B_2_pin, GPIO.OUT)
- 
-GPIO.output(enable_pin, 1)
  
 def setStep(w1, w2, w3, w4):
     GPIO.output(coil_A_1_pin, w1)
