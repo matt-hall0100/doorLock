@@ -6,8 +6,8 @@ def lock():
     #GPIO setup
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
-    control_pins = [21,20,16,19]
-    powerPin = 26
+    control_pins = [29,28,27,24]
+    powerPin = 25
 
     GPIO.setup(control_pins[0], GPIO.OUT)
     GPIO.output(control_pins[0], 0)
@@ -45,8 +45,8 @@ def unlock():
     #GPIO setup
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
-    control_pins = [21,20,16,19]
-    powerPin = 26
+    control_pins = [29,28,27,24]
+    powerPin = 25
 
     GPIO.setup(control_pins[0], GPIO.OUT)
     GPIO.output(control_pins[0], 0)
