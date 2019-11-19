@@ -42,7 +42,8 @@ def unlock():
         [0,1,0,0],
         [1,1,0,0],
         [1,0,0,0],
-        [1,0,0,1]
+        [1,0,0,1]]
+    
     for i in range(125):
         for halfstep in range(8):
             for pin in range(4):
