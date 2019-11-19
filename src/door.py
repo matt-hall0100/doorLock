@@ -1,12 +1,12 @@
 import RPi.GPIO as GPIO
 import time
 
-def lock():
 
-    #GPIO setup
+def lock():
+    # GPIO setup
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
-    control_pins = [29,28,27,24]
+    control_pins = [29, 28, 27, 24]
     powerPin = 25
 
     GPIO.setup(control_pins[0], GPIO.OUT)
@@ -22,14 +22,14 @@ def lock():
     GPIO.output(powerPin,1)
 
     halfstep_seq = [
-        [1,0,0,0],
-        [1,1,0,0],
-        [0,1,0,0],
-        [0,1,1,0],
-        [0,0,1,0],
-        [0,0,1,1],
-        [0,0,0,1],
-        [1,0,0,1]
+        [1, 0, 0, 0],
+        [1, 1, 0, 0],
+        [0, 1, 0, 0],
+        [0, 1, 1, 0],
+        [0, 0, 1, 0],
+        [0, 0, 1, 1],
+        [0, 0, 0, 1],
+        [1, 0, 0, 1]
         ]
 
     for i in range(80):
@@ -45,7 +45,7 @@ def unlock():
     #GPIO setup
     GPIO.setmode(GPIO.BOARD)
     GPIO.setwarnings(False)
-    control_pins = [29,28,27,24]
+    control_pins = [29, 28, 27, 24]
     powerPin = 25
 
     GPIO.setup(control_pins[0], GPIO.OUT)
@@ -61,14 +61,14 @@ def unlock():
     GPIO.output(powerPin,1)
 
     halfstep_seq = [
-        [0,0,0,1],
-        [0,0,1,1],
-        [0,0,1,0],
-        [0,1,1,0],
-        [0,1,0,0],
-        [1,1,0,0],
-        [1,0,0,0],
-        [1,0,0,1]
+        [0, 0, 0, 1],
+        [0, 0, 1, 1],
+        [0, 0, 1, 0],
+        [0, 1, 1, 0],
+        [0, 1, 0, 0],
+        [1, 1, 0, 0],
+        [1, 0, 0, 0],
+        [1, 0, 0, 1]
         ]
 
     for i in range(80):
