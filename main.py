@@ -17,6 +17,6 @@ while(True):
         lockState = tmpLockState
 
     # Physical Check
-    tmpPhysicalState = getPhysicalState()
-    if tmpPhysicalState != lockState:
-        setDbLockState(tmpPhysicalState)
+    #tmpPhysicalState = getPhysicalState()
+    #if tmpPhysicalState != lockState:
+    #    setDbLockState(tmpPhysicalState)
