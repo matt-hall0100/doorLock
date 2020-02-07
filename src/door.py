@@ -3,7 +3,7 @@ import time
 
 def lock():
     GPIO.setmode(GPIO.BOARD)
-    control_pins = [7,11,13,15]
+    control_pins = [40,38,36,32]
     for pin in control_pins:
         GPIO.setup(pin, GPIO.OUT)
         GPIO.output(pin, 0)
